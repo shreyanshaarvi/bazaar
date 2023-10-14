@@ -8,29 +8,28 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'register_model.dart';
-export 'register_model.dart';
+import 'login_page_model.dart';
+export 'login_page_model.dart';
 
-class RegisterWidget extends StatefulWidget {
-  const RegisterWidget({Key? key}) : super(key: key);
+class LoginPageWidget extends StatefulWidget {
+  const LoginPageWidget({Key? key}) : super(key: key);
 
   @override
-  _RegisterWidgetState createState() => _RegisterWidgetState();
+  _LoginPageWidgetState createState() => _LoginPageWidgetState();
 }
 
-class _RegisterWidgetState extends State<RegisterWidget> {
-  late RegisterModel _model;
+class _LoginPageWidgetState extends State<LoginPageWidget> {
+  late LoginPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => RegisterModel());
+    _model = createModel(context, () => LoginPageModel());
 
     _model.textController1 ??= TextEditingController();
     _model.textController2 ??= TextEditingController();
-    _model.textController3 ??= TextEditingController();
   }
 
   @override
@@ -100,7 +99,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Text(
-                                  'Register Now',
+                                  'Login Now',
                                   style: FlutterFlowTheme.of(context)
                                       .headlineLarge,
                                 ),
@@ -121,7 +120,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: Text(
-                                    'Enjoy The World Of Shop 🏬',
+                                    'Enter The World Of Shop 🏬',
                                     style:
                                         FlutterFlowTheme.of(context).bodyLarge,
                                   ),
@@ -261,7 +260,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                         5.0, 0.0, 8.0, 0.0),
                                     child: TextFormField(
                                       controller: _model.textController2,
-                                      obscureText: !_model.passwordVisibility1,
+                                      obscureText: !_model.passwordVisibility,
                                       decoration: InputDecoration(
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
@@ -322,13 +321,13 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                         ),
                                         suffixIcon: InkWell(
                                           onTap: () => setState(
-                                            () => _model.passwordVisibility1 =
-                                                !_model.passwordVisibility1,
+                                            () => _model.passwordVisibility =
+                                                !_model.passwordVisibility,
                                           ),
                                           focusNode:
                                               FocusNode(skipTraversal: true),
                                           child: Icon(
-                                            _model.passwordVisibility1
+                                            _model.passwordVisibility
                                                 ? Icons.visibility_outlined
                                                 : Icons.visibility_off_outlined,
                                             size: 20.0,
@@ -350,122 +349,6 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 10.0, 10.0, 10.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Material(
-                                color: Colors.transparent,
-                                elevation: 2.0,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                                child: Container(
-                                  width: 358.0,
-                                  height: 49.0,
-                                  decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    borderRadius: BorderRadius.circular(10.0),
-                                    border: Border.all(
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                    ),
-                                  ),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 8.0, 0.0),
-                                    child: TextFormField(
-                                      controller: _model.textController3,
-                                      obscureText: !_model.passwordVisibility2,
-                                      decoration: InputDecoration(
-                                        labelStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium,
-                                        hintText: 'Confirm Password',
-                                        hintStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily: 'Raleway',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                        enabledBorder: UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .alternate,
-                                            width: 2.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        focusedBorder: UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            width: 2.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        errorBorder: UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            width: 2.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        focusedErrorBorder:
-                                            UnderlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: FlutterFlowTheme.of(context)
-                                                .error,
-                                            width: 2.0,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                        ),
-                                        contentPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                20.0, 20.0, 20.0, 20.0),
-                                        prefixIcon: Icon(
-                                          Icons.confirmation_num,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                        ),
-                                        suffixIcon: InkWell(
-                                          onTap: () => setState(
-                                            () => _model.passwordVisibility2 =
-                                                !_model.passwordVisibility2,
-                                          ),
-                                          focusNode:
-                                              FocusNode(skipTraversal: true),
-                                          child: Icon(
-                                            _model.passwordVisibility2
-                                                ? Icons.visibility_outlined
-                                                : Icons.visibility_off_outlined,
-                                            size: 20.0,
-                                          ),
-                                        ),
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
-                                      keyboardType:
-                                          TextInputType.visiblePassword,
-                                      validator: _model.textController3Validator
-                                          .asValidator(context),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -475,7 +358,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                 onPressed: () {
                                   print('Button pressed ...');
                                 },
-                                text: 'Register Now',
+                                text: 'Login',
                                 options: FFButtonOptions(
                                   width: 159.0,
                                   height: 43.0,
@@ -653,7 +536,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                 text: TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: 'Already have an account ',
+                                      text: 'Don\'t have an account ',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -664,7 +547,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                           ),
                                     ),
                                     TextSpan(
-                                      text: ' - login now',
+                                      text: ' - Register Now',
                                       style: TextStyle(
                                         color:
                                             FlutterFlowTheme.of(context).error,
@@ -673,12 +556,16 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                       mouseCursor: SystemMouseCursors.click,
                                       recognizer: TapGestureRecognizer()
                                         ..onTap = () async {
-                                          context.pushNamed('LoginPage');
+                                          context.pushNamed('Register');
                                         },
                                     )
                                   ],
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Raleway',
+                                        fontWeight: FontWeight.w800,
+                                      ),
                                 ),
                               ),
                             ],
