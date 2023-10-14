@@ -590,21 +590,24 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                         child: Stack(
                           alignment: AlignmentDirectional(0.0, 0.0),
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(8.0),
-                              child: CachedNetworkImage(
-                                fadeInDuration: Duration(milliseconds: 500),
-                                fadeOutDuration: Duration(milliseconds: 500),
-                                imageUrl:
-                                    'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw1fHxzaG9wcGluZ3xlbnwwfHx8fDE2OTczMDMzMTd8MA&ixlib=rb-4.0.3&q=85',
-                                width: double.infinity,
-                                height: double.infinity,
-                                fit: BoxFit.cover,
-                                alignment: Alignment(0.00, 0.00),
+                            Align(
+                              alignment: AlignmentDirectional(0.00, 0.00),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: CachedNetworkImage(
+                                  fadeInDuration: Duration(milliseconds: 500),
+                                  fadeOutDuration: Duration(milliseconds: 500),
+                                  imageUrl:
+                                      'https://images.unsplash.com/photo-1603400521630-9f2de124b33b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyMXx8c3RvcmV8ZW58MHx8fHwxNjk3MzA0NDIyfDA&ixlib=rb-4.0.3&q=85',
+                                  width: double.infinity,
+                                  height: double.infinity,
+                                  fit: BoxFit.cover,
+                                  alignment: Alignment(0.00, 0.00),
+                                ),
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.00, 0.01),
+                              alignment: AlignmentDirectional(0.02, -0.46),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
@@ -615,13 +618,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       .override(
                                         fontFamily: 'Itim',
                                         color: FlutterFlowTheme.of(context)
-                                            .primary,
+                                            .primaryText,
                                       ),
                                 ),
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.07, 0.20),
+                              alignment: AlignmentDirectional(-0.05, -0.22),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
@@ -632,7 +635,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       .override(
                                         fontFamily: 'Itim',
                                         color: FlutterFlowTheme.of(context)
-                                            .primary,
+                                            .primaryText,
                                         fontSize: 39.0,
                                         fontWeight: FontWeight.w300,
                                       ),
