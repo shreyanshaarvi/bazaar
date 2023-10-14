@@ -646,7 +646,62 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                       EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
-                    children: [],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Stack(
+                          alignment: AlignmentDirectional(0.0, 0.0),
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.network(
+                                'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw1fHxzaG9wcGluZ3xlbnwwfHx8fDE2OTczMDMzMTd8MA&ixlib=rb-4.0.3&q=85',
+                                width: double.infinity,
+                                height: double.infinity,
+                                fit: BoxFit.cover,
+                                alignment: Alignment(0.00, 0.00),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(-0.00, 0.01),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 10.0),
+                                child: Text(
+                                  'Bazaar',
+                                  style: FlutterFlowTheme.of(context)
+                                      .displayLarge
+                                      .override(
+                                        fontFamily: 'Itim',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                      ),
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: AlignmentDirectional(0.07, 0.20),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 10.0),
+                                child: Text(
+                                  'One Stop For Everything',
+                                  style: FlutterFlowTheme.of(context)
+                                      .displayMedium
+                                      .override(
+                                        fontFamily: 'Itim',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        fontSize: 39.0,
+                                        fontWeight: FontWeight.w300,
+                                      ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
