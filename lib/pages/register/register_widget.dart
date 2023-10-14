@@ -138,26 +138,32 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                           Expanded(
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  8.0, 0.0, 8.0, 0.0),
+                                  0.0, 10.0, 8.0, 0.0),
                               child: TextFormField(
                                 controller: _model.textController2,
                                 autofocus: true,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelText: 'Label here...',
-                                  labelStyle:
-                                      FlutterFlowTheme.of(context).labelMedium,
+                                  labelStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .override(
+                                        fontFamily: 'Raleway',
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontWeight: FontWeight.w500,
+                                      ),
                                   hintStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
-                                  enabledBorder: UnderlineInputBorder(
+                                  enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context)
-                                          .alternate,
+                                          .secondaryText,
                                       width: 2.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                  focusedBorder: UnderlineInputBorder(
+                                  focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color:
                                           FlutterFlowTheme.of(context).primary,
@@ -165,14 +171,14 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                  errorBorder: UnderlineInputBorder(
+                                  errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
                                     ),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
-                                  focusedErrorBorder: UnderlineInputBorder(
+                                  focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: FlutterFlowTheme.of(context).error,
                                       width: 2.0,
@@ -187,6 +193,10 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                             ),
                           ),
                         ],
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [],
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
