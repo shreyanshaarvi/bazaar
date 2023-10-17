@@ -97,7 +97,7 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 30.0, 0.0, 0.0),
                                         child: Text(
-                                          'Trend &Threads',
+                                          'Trend & Threads',
                                           style: FlutterFlowTheme.of(context)
                                               .displayLarge,
                                         ),
