@@ -59,7 +59,7 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                       crossAxisCount: 2,
                       crossAxisSpacing: 10.0,
                       mainAxisSpacing: 10.0,
-                      childAspectRatio: 1.65,
+                      childAspectRatio: 1.73,
                     ),
                     scrollDirection: Axis.vertical,
                     children: [
@@ -140,7 +140,7 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                                                     .override(
                                                       fontFamily: 'Raleway',
                                                       color: Colors.white,
-                                                      fontSize: 26.0,
+                                                      fontSize: 20.0,
                                                     ),
                                             elevation: 3.0,
                                             borderSide: BorderSide(
@@ -306,7 +306,7 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .primaryText,
-                                                  fontSize: 26.0,
+                                                  fontSize: 20.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                             elevation: 3.0,
@@ -471,7 +471,7 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                                                     .override(
                                                       fontFamily: 'Raleway',
                                                       color: Colors.white,
-                                                      fontSize: 26.0,
+                                                      fontSize: 20.0,
                                                     ),
                                             elevation: 3.0,
                                             borderSide: BorderSide(
@@ -635,7 +635,7 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                                                     .override(
                                                       fontFamily: 'Raleway',
                                                       color: Colors.white,
-                                                      fontSize: 22.0,
+                                                      fontSize: 20.0,
                                                     ),
                                             elevation: 3.0,
                                             borderSide: BorderSide(
