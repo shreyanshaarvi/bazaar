@@ -120,8 +120,8 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                                           ),
                                         ),
                                         FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
+                                          onPressed: () async {
+                                            context.pushNamed('ClothHomePage');
                                           },
                                           text: 'Open Cloth Shop',
                                           options: FFButtonOptions(
@@ -592,7 +592,7 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'Discover Your Signature Style',
+                                          'Bringing Freshness to Your Doorstep',
                                           style: FlutterFlowTheme.of(context)
                                               .displayLarge
                                               .override(
@@ -605,7 +605,7 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 20.0, 0.0, 0.0),
                                           child: Text(
-                                            'Threaded to Perfection, Styled for You',
+                                            'Grocery Goodness',
                                             style: FlutterFlowTheme.of(context)
                                                 .headlineSmall
                                                 .override(
@@ -618,7 +618,7 @@ class _ChooseShopWidgetState extends State<ChooseShopWidget> {
                                           onPressed: () {
                                             print('Button pressed ...');
                                           },
-                                          text: 'Open Cloth Shop',
+                                          text: 'Open Grocery Shop',
                                           options: FFButtonOptions(
                                             height: 52.0,
                                             padding:

@@ -473,8 +473,8 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  context.pushNamed('chooseShop');
                                 },
                                 text: 'Register Now',
                                 options: FFButtonOptions(
