@@ -7,8 +7,10 @@ import 'cloth_home_page_widget.dart' show ClothHomePageWidget;
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -27,6 +29,9 @@ class ClothHomePageModel extends FlutterFlowModel<ClothHomePageWidget> {
   // State field(s) for ChoiceChips widget.
   String? choiceChipsValue;
   FormFieldController<List<String>>? choiceChipsValueController;
+  // State field(s) for TextField widget.
+  TextEditingController? textController;
+  String? Function(BuildContext, String?)? textControllerValidator;
 
   /// Initialization and disposal methods.
 
@@ -34,6 +39,7 @@ class ClothHomePageModel extends FlutterFlowModel<ClothHomePageWidget> {
 
   void dispose() {
     unfocusNode.dispose();
+    textController?.dispose();
   }
 
   /// Action blocks are added here.
