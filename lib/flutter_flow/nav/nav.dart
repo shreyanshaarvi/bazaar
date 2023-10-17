@@ -55,7 +55,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => LoginPageWidget(),
         ),
         FFRoute(
-          name: 'ChooseShop',
+          name: 'chooseShop',
           path: '/chooseShop',
           builder: (context, params) => ChooseShopWidget(),
         )

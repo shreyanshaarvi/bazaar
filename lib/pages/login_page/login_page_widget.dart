@@ -356,8 +356,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FFButtonWidget(
-                                onPressed: () async {
-                                  context.pushNamed('ChooseShop');
+                                onPressed: () {
+                                  print('Button pressed ...');
                                 },
                                 text: 'Login',
                                 options: FFButtonOptions(
