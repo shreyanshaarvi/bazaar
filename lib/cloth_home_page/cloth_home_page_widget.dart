@@ -162,6 +162,13 @@ class _ClothHomePageWidgetState extends State<ClothHomePageWidget> {
                         fontSize: 48.0,
                       ),
                 ),
+                Container(
+                  width: 17.0,
+                  height: 33.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                  ),
+                ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -213,7 +220,6 @@ class _ClothHomePageWidgetState extends State<ClothHomePageWidget> {
                             PageView(
                               controller: _model.pageViewController ??=
                                   PageController(initialPage: 0),
-                              onPageChanged: (_) => setState(() {}),
                               scrollDirection: Axis.horizontal,
                               children: [
                                 Container(
@@ -526,10 +532,11 @@ class _ClothHomePageWidgetState extends State<ClothHomePageWidget> {
                           chipSpacing: 12.0,
                           rowSpacing: 12.0,
                           multiselect: false,
+                          initialized: _model.choiceChipsValue != null,
                           alignment: WrapAlignment.start,
                           controller: _model.choiceChipsValueController ??=
                               FormFieldController<List<String>>(
-                            [],
+                            ['All'],
                           ),
                           wrapped: false,
                         ),
